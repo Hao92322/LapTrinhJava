@@ -15,12 +15,11 @@ public class FirstProgram {
 		}
 	}
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		//ghi chu 1 dong
 		/*ghi chu nhieu dong
 		 * 22
 		 */
-		
+		System.out.println("hello hello");
 	}
 	public abstract class ConNguoi
 	{
@@ -51,7 +50,6 @@ public class FirstProgram {
 		{
 			return cccd;
 		}
-		public virtu
 	}
 	public class Male extends ConNguoi
 	{
