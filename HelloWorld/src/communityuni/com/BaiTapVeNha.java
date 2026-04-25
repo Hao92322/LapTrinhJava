@@ -175,63 +175,61 @@ public class BaiTapVeNha {
 	public static void HashMap()
 	{
 		Scanner sc = new Scanner(System.in);
-		try
+		System.out.print("Nhap so luong phan tu cua ArrayList : ");
+		int size = sc.nextInt();
+		HashMap<Integer,String> arr = new HashMap<>();
+		System.out.println("Nhap mang :");
+		for(int i=0;i<size;i++)
 		{
-			System.out.print("Nhap so luong phan tu cua ArrayList : ");
-			int size = sc.nextInt();
-			HashMap<Integer,String> arr = new HashMap<>();
-			System.out.println("Nhap mang :");
-			for(int i=0;i<size;i++)
-			{
+			int key = sc.nextInt();
+			String value = sc.nextLine();
+			arr.put(key,value);
+		}
+		int query = -1;
+		while(query!=0)
+		{
+			System.out.println("Chuong trinh ArrayList");
+			System.out.println("1.Them");
+			System.out.println("2.Sua");
+			System.out.println("3.Xoa");
+			System.out.println("3.Tim Kiem");
+			System.out.println("4.Sap xep");
+			System.out.println("5.Xuat Mang");
+			System.out.println("0.Thoat Chuong Trinh !!!");
+			System.out.println("Nhap thao tac ban muon :");
+			query = sc.nextInt();
+			switch (query) {
+			case 1: {
+				System.out.print("Nhap gia tri ban muon them :");
 				int key = sc.nextInt();
 				String value = sc.nextLine();
 				arr.put(key,value);
 			}
-			int query = -1;
-			while(query!=0)
+			case 2:
 			{
-				System.out.println("Chuong trinh ArrayList");
-				System.out.println("1.Them");
-				System.out.println("2.Sua");
-				System.out.println("3.Xoa");
-				System.out.println("3.Tim Kiem");
-				System.out.println("4.Sap xep");
-				System.out.println("5.Xuat Mang");
-				System.out.println("0.Thoat Chuong Trinh !!!");
-				System.out.println("Nhap thao tac ban muon :");
-				query = sc.nextInt();
-				switch (query) {
-				case 1: {
-					System.out.print("Nhap gia tri ban muon them :");
-					int key = sc.nextInt();
-					String value = sc.nextLine();
-					arr.put(key,value);
-				}
-				case 2:
+				System.out.print("Nhap key ban muon sua: ");
+				if(arr.containsKey(sc.nextInt()))
+					System.out.println("Key khong ton tai");
+				
+			}
+			case 3: {
+				System.out.println("Nhap ten sach ban muon xoa :");
+				String value = sc.nextLine();
+				arr.remove(value);
+			}
+			case 5:
+			{
+				for(int i=0;i<arr.size();i++)
 				{
-					System.out.print("Nhap key ban muon sua: ");
-					if(arr.containsKey(sc.nextInt()))
-						System.out.println("Key khong ton tai");
-					
-				}
-				case 3: {
-					System.out.println("Nhap ten sach ban muon xoa :");
-					String value = sc.nextLine();
-					arr.remove(value);
-				}
-				case 5:
-				{
-					for(int i=0;i<arr.size();i++)
-					{
-						System.out.print(arr.get(i) + ' ');
-					}
-				}
-				default:
-					System.out.println("Thao Tac Khong Hop Le !!!");
+					System.out.print(arr.get(i) + ' ');
 				}
 			}
-		
+			default:{
+				System.out.println("Thao Tac Khong Hop Le !!!");
+			}
+		}
 	}
+}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ArrayList();
