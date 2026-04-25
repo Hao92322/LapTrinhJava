@@ -188,13 +188,11 @@ public class BaiTapVeNha {
 		int query = -1;
 		while(query!=0)
 		{
-			System.out.println("Chuong trinh ArrayList");
+			System.out.println("Chuong trinh HashMap");
 			System.out.println("1.Them");
 			System.out.println("2.Sua");
 			System.out.println("3.Xoa");
-			System.out.println("3.Tim Kiem");
-			System.out.println("4.Sap xep");
-			System.out.println("5.Xuat Mang");
+			System.out.println("4.Tim Kiem");
 			System.out.println("0.Thoat Chuong Trinh !!!");
 			System.out.println("Nhap thao tac ban muon :");
 			query = sc.nextInt();
@@ -210,7 +208,8 @@ public class BaiTapVeNha {
 				System.out.print("Nhap key ban muon sua: ");
 				if(arr.containsKey(sc.nextInt()))
 					System.out.println("Key khong ton tai");
-				
+				System.out.print("Nhap gia tri ban muon sua :");
+					
 			}
 			case 3: {
 				System.out.println("Nhap ten sach ban muon xoa :");
